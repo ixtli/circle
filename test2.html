@@ -1,0 +1,17 @@
+<div id=B></div>
+<script>
+m=90;
+z='style';
+v='innerHTML';
+i=0;
+r=500;
+setInterval(function () {
+	if(i<m)B[v]+=`<div ${z}="transition:all 1s;position:absolute">`;
+	p=B.childNodes[i%m];
+	p[v]=i%m;
+	p=p[z];
+	p.color=`#${i%99}0000`;
+	p.left=r+Math.sin(i)*r;
+	p.top=r+Math.cos(i++)*r;
+}, 25);
+</script>

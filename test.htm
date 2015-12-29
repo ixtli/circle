@@ -1,0 +1,16 @@
+<div id=B>
+<script>
+r=Math.random;
+
+B.innerHTML=`<div style="width:25;height:25;transition:all 1s;position:absolute;background-color:red">`;
+c=B.childNodes[0];
+setInterval(()=>{
+
+v=c.style;
+v.top=r()*1000;
+v.left=r()*1000;
+c=c.cloneNode();
+B.appendChild(c)
+
+},1000);
+</script>
